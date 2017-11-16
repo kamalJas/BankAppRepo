@@ -1,0 +1,104 @@
+.LOG
+9:59 AM 11/14/2017
+https://github.com/Training2017/MCI
+===========
+
+10:00 AM 11/14/2017
+MCI ==> Master Continous Integration
+
+SCM ==> Source Control Managemnet
+{SVN/ GIT / BITBUCKET}
+
+TESTING
+{JUNIT/ TDD ==> Test Driven Data}
+
+BCT ==> Build Script Tools
+{ANT/ MAVEN/ GRADLE}
+
+BS ==> Build Server
+{JENKINS/ BAMBOO }
+
+{MAVEN HOME = D:\apache-maven-3.5.2}
+
+TDD {Test Driven Development} ==> write test case first and test functionality
+RGR  ==>{ Red Green Refactor} ==> Nothing has been implemented 
+Pass Or Fail ==> 
+No Conditional functionality inside the test case ==>
+Should not write system.out.println() inside testcase methods() ==>
+Should not take the test case into production environment ==>
+MOCKITO
+DBUNIT
+POWERMOCKITO
+
+
+
+
+
+
+9:45 AM 11/15/2017
+======================DAY - 2 MCI TRAINING =========================
+SCM ==> Master Slave Architecture(SVN ==> Client => server) 
+	Metadata storage is very miniumum.		
+
+	Github (Distributed Server(Mounted multiple servers))
+		(Access via browser)
+		(git cmd/ git bash/ git desktop version/ IDE configurable(egit plugin))
+		Metadata storage is high
+  
+{trunk/ Master / Branch}
+
+9:47 AM 11/16/2017
+====================DAY - 3 SONAR CUBE & JENKINS ====================
+
+SOnar plugin with the settings.xml into Maven User settings.
+
+Window --> Preference --> Maven --> UserSetting --> Path change into local settings.xml file
+select Project --> run configurations --> Maven --> Goals ==> sonar:sonar ==> apply ==> run
+D:\kamal_day3Training_SonarAndJenkins\sonarqube-4.5.7\bin\windows-x86-64>StartSonar.bat
+http://localhost:9000/dashboard/index/1
+
+Hadson and Jenkins, BaMBOO are cloudbase , build server of development integration.
+Web Based Java
+Open Source
+Highly extensible
+Jenkins in the shape 
+Jenkins has support 
+		checkin
+    DEVloper -----------> Source Control 
+				|
+				|	
+				|
+		Jenkins --------
+		   |
+		   |
+		build tool
+
+Prerequisities
+==============
+0.Jenkins defaultly supports the maven build 
+1.Java 1.5 or higher
+2. D:\kamal_day3Training_SonarAndJenkins> java -jar jenkins.war
+3. http://localhost:8080/
+
+Under --> Manage Jenkins ==> first configure ==> JDK --> Add JDK >> 
+		Version => JDK1.8
+		HOME PATH ==> C:\Program Files\Java\jdk1.8.0
+	Second Configure ==> Maven Name : Maven3
+			     Maven Path : D:\apache-maven-3.5.2
+	Git needs to install Go to ==> Manage Plugins ==> Advanced options => Upload Plugin ==>select git.hpi from local location
+					upload it. save
+	Thrid configure is ==> Git Name : Default
+				PAth of Git : C:\Program Files\Git\bin\git.exe
+
+	Create New Item ==> Select Maven project ==> 
+			    Maven Project :
+			    Description :
+			    Discard Old Builds: 
+
+
+
+	Manage Plugins Add remaining three hpi file 
+
+1. build-environment
+2. Jquery
+3. sonar
